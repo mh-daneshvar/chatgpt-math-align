@@ -2,9 +2,8 @@
   "manifest_version": 3,
   "name": "Math Formatter",
   "version": "1.0.0",
-  "description": "Adds 'Math Align' to the context menu to set 'direction: ltr !important' on the nearest KaTeX element.",
+  "description": "Automatically sets 'direction: ltr !important' on KaTeX elements for math alignment.",
   "permissions": [
-    "contextMenus",
     "activeTab",
     "scripting"
   ],
@@ -14,15 +13,19 @@
   "background": {
     "service_worker": "background.js"
   },
-  "action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "192": "images/icon-192x192.png",
-      "512": "images/icon-512x512.png"
-    }
-  },
   "icons": {
     "192": "images/icon-192x192.png",
     "512": "images/icon-512x512.png"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chat.openai.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
 }
