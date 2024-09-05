@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Math Formatter",
+  "version": "1.0.0",
+  "description": "Adds 'Math Align' to the context menu to set 'direction: ltr !important' on the nearest KaTeX element.",
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "192": "images/icon-192x192.png",
+      "512": "images/icon-512x512.png"
+    }
+  },
+  "icons": {
+    "192": "images/icon-192x192.png",
+    "512": "images/icon-512x512.png"
+  }
+}
