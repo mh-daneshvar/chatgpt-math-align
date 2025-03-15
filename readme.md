@@ -5,6 +5,7 @@
 ## Features
 
 - Manually set the direction of KaTeX-rendered math formulas to LTR in ChatGPT.
+- Automatically set the direction of the entire assistant message to RTL for better readability.
 - Designed for users interacting with ChatGPT in RTL languages (e.g., Arabic, Persian).
 - Easily accessible via the right-click context menu when using ChatGPT.
 
@@ -45,11 +46,14 @@ Follow these steps to install and use the **Math Align** extension specifically 
 3. If the mathematical formula is displayed incorrectly, **select** the problematic math text.
 4. **Right-click** on the selected text.
 5. From the context menu, select the **"Math Align"** action.
-6. The extension will apply the **left-to-right (LTR)** direction to the nearest math formula, ensuring it displays correctly within ChatGPT.
+6. The extension will:
+   - Apply the **left-to-right (LTR)** direction to the nearest math formula
+   - Set the entire assistant message to **right-to-left (RTL)** for better readability of the surrounding text
+   - Ensure proper display of both mathematical formulas and RTL text within ChatGPT
 
 ### About
 
-This extension is particularly useful for users of ChatGPT who ask mathematical questions in RTL languages (such as Arabic or Persian). It helps to align the mathematical formulas correctly when they are misaligned due to the RTL context.
+This extension is particularly useful for users of ChatGPT who ask mathematical questions in RTL languages (such as Arabic or Persian). It helps to align the mathematical formulas correctly when they are misaligned due to the RTL context, while maintaining proper RTL alignment for the surrounding text.
 
 To learn more about KaTeX, the library used to render these formulas, visit [katex.org](https://katex.org).
 
