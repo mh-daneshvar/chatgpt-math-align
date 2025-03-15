@@ -24,11 +24,21 @@ function mathAlignAction() {
         ? range.commonAncestorContainer
         : range.commonAncestorContainer.parentElement;
 
+    // Find and style KaTeX element if present
     const katexElement = selectedElement.closest('.katex');
     if (katexElement) {
         katexElement.style.setProperty('direction', 'ltr', 'important');
         console.log('Applied direction: ltr to', katexElement);
     } else {
         console.log('No .katex element found near the selection.');
+    }
+
+    // Find and style the nearest assistant message div
+    const assistantDiv = selectedElement.closest('[data-message-author-role="assistant"]');
+    if (assistantDiv) {
+        assistantDiv.style.setProperty('direction', 'rtl', 'important');
+        console.log('Applied direction: rtl to assistant message div');
+    } else {
+        console.log('No assistant message div found near the selection.');
     }
 }
